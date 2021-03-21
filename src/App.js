@@ -4,17 +4,24 @@ import './App.css';
 const App = () => {
   const [currentTime, setcurrentTime] = useState('');
 
-  useEffect(() => {
-    const timerID = setInterval( () => setcurrentTime(time), 100);
+  function updateTime() {
+    
+    const today = new Date()
+    const time = today.toLocaleTimeString();
+    setcurrentTime(time);
+  }
 
+  useEffect(() => {
+    const timerID = setInterval(updateTime, 1000);
     return function cleanup() {
       clearInterval(timerID);
     }
   }, [])
-  const today = new Date()
-  const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  
   return (
-  <div className="clock">{currentTime}
+  <div className="flex-container">
+    <div className="clock">{currentTime}
+    </div>
   </div>
   )
 }

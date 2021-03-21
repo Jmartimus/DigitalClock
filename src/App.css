@@ -1,5 +1,20 @@
-.clock {
+.flex-container {
     display: flex;
-    Justify-content: center;
+    justify-content: center;
     align-items: center;
+    border-top: 50px solid black;
+    border-right: 50px solid black;
+    border-bottom: 50px solid black;
+    border-left: 50px solid black;
+    margin: 11em 15em 0 15em;
+    background: black;
+    border-radius: 25px;
+}
+.clock {
+    position: fixed;
+    margin: auto;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 50px;
+    color: #33FFF7;
 }
