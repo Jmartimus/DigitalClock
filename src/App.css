@@ -1,20 +1,26 @@
-.flex-container {
+#container {
+    height: 100vh;
+    width: 100vw;
     display: flex;
-    justify-content: center;
     align-items: center;
-    border-top: 50px solid black;
-    border-right: 50px solid black;
-    border-bottom: 50px solid black;
-    border-left: 50px solid black;
-    margin: 11em 15em 0 15em;
-    background: black;
-    border-radius: 25px;
+    justify-content: center;
+    @media screen and (max-width: 400px){
+  }
 }
 .clock {
-    position: fixed;
+    width: 500px;
+    height: 70px;
+    background-color: black;
+    border-radius: 40px;
+    padding: 20px;
     margin: auto;
     text-align: center;
     font-family: 'Orbitron', sans-serif;
     font-size: 50px;
     color: #33FFF7;
+    @media screen and (max-width: 400px){
+font-size: 20px;
+width: 250px;
+    height: 50px;
+  }
 }

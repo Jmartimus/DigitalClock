@@ -19,10 +19,9 @@ const App = () => {
   }, [])
   
   return (
-  <div className="flex-container">
-    <div className="clock">{currentTime}
-    </div>
-  </div>
-  )
+      <div id="container">
+        <div className="clock">{currentTime}</div>
+      </div>
+  );
 }
 export default App;
